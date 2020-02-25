@@ -44,7 +44,7 @@
             // 
             // Montante
             // 
-            this.Montante.Location = new System.Drawing.Point(46, 73);
+            this.Montante.Location = new System.Drawing.Point(46, 97);
             this.Montante.Name = "Montante";
             this.Montante.Size = new System.Drawing.Size(712, 22);
             this.Montante.TabIndex = 0;
@@ -52,7 +52,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 53);
+            this.label1.Location = new System.Drawing.Point(43, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 17);
             this.label1.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             // Descricao
             // 
-            this.Descricao.Location = new System.Drawing.Point(46, 134);
+            this.Descricao.Location = new System.Drawing.Point(46, 153);
             this.Descricao.Multiline = true;
             this.Descricao.Name = "Descricao";
             this.Descricao.Size = new System.Drawing.Size(712, 40);
@@ -70,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 114);
+            this.label2.Location = new System.Drawing.Point(43, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 17);
             this.label2.TabIndex = 3;
@@ -79,7 +79,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 186);
+            this.label3.Location = new System.Drawing.Point(43, 205);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 17);
             this.label3.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             // DataTransacao
             // 
-            this.DataTransacao.Location = new System.Drawing.Point(46, 206);
+            this.DataTransacao.Location = new System.Drawing.Point(46, 225);
             this.DataTransacao.Name = "DataTransacao";
             this.DataTransacao.Size = new System.Drawing.Size(200, 22);
             this.DataTransacao.TabIndex = 5;
@@ -95,7 +95,7 @@
             // Pagamento
             // 
             this.Pagamento.AutoSize = true;
-            this.Pagamento.Location = new System.Drawing.Point(46, 256);
+            this.Pagamento.Location = new System.Drawing.Point(46, 272);
             this.Pagamento.Name = "Pagamento";
             this.Pagamento.Size = new System.Drawing.Size(101, 21);
             this.Pagamento.TabIndex = 6;
@@ -106,7 +106,7 @@
             // Recebimento
             // 
             this.Recebimento.AutoSize = true;
-            this.Recebimento.Location = new System.Drawing.Point(168, 256);
+            this.Recebimento.Location = new System.Drawing.Point(166, 272);
             this.Recebimento.Name = "Recebimento";
             this.Recebimento.Size = new System.Drawing.Size(112, 21);
             this.Recebimento.TabIndex = 7;
@@ -147,6 +147,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 561);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
@@ -159,6 +160,7 @@
             this.Controls.Add(this.Descricao);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Montante);
+            this.DoubleBuffered = true;
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.Text = "MinhasTransações";

@@ -69,5 +69,25 @@ namespace MoneyTracker.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bank_transfer_trade_online_payment_transaction_512 {
+            get {
+                object obj = ResourceManager.GetObject("bank_transfer_trade_online_payment_transaction-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap finance_11_512 {
+            get {
+                object obj = ResourceManager.GetObject("finance_11-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

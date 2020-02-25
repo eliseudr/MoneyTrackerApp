@@ -10,24 +10,19 @@ using System.Windows.Forms;
 
 namespace MoneyTracker
 {
-    public partial class MainForm : Form
+    public partial class SingUp : Form
     {
-        public MainForm()
+        public SingUp()
         {
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-
+         
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void Cadastrar_Click(object sender, EventArgs e)
         {
 
         }

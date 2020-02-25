@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MoneyTracker
 {
-    public partial class Form1 : Form
+    public partial class LogIn : Form
     {
-        public Form1()
+        public LogIn()
         {
             InitializeComponent();
         }
@@ -31,6 +31,13 @@ namespace MoneyTracker
             mainform.Show(); //Mostra o outro formulario
             this.Hide(); //Fecha o formulario Antigo
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SingUp singup = new SingUp();
+            singup.Show();
+            this.Hide();
         }
     }
 }
