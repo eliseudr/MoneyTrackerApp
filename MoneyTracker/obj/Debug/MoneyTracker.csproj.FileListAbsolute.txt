@@ -1,0 +1,10 @@
+C:\Users\Eliseu\Desktop\Web\C#\MoneyTrackerApp\MoneyTracker\bin\Debug\MoneyTracker.exe.config
+C:\Users\Eliseu\Desktop\Web\C#\MoneyTrackerApp\MoneyTracker\bin\Debug\MoneyTracker.exe
+C:\Users\Eliseu\Desktop\Web\C#\MoneyTrackerApp\MoneyTracker\bin\Debug\MoneyTracker.pdb
+C:\Users\Eliseu\Desktop\Web\C#\MoneyTrackerApp\MoneyTracker\obj\Debug\MoneyTracker.csprojAssemblyReference.cache
+C:\Users\Eliseu\Desktop\Web\C#\MoneyTrackerApp\MoneyTracker\obj\Debug\MoneyTracker.Form1.resources
+C:\Users\Eliseu\Desktop\Web\C#\MoneyTrackerApp\MoneyTracker\obj\Debug\MoneyTracker.Properties.Resources.resources
+C:\Users\Eliseu\Desktop\Web\C#\MoneyTrackerApp\MoneyTracker\obj\Debug\MoneyTracker.csproj.GenerateResource.cache
+C:\Users\Eliseu\Desktop\Web\C#\MoneyTrackerApp\MoneyTracker\obj\Debug\MoneyTracker.exe
+C:\Users\Eliseu\Desktop\Web\C#\MoneyTrackerApp\MoneyTracker\obj\Debug\MoneyTracker.pdb
+C:\Users\Eliseu\Desktop\Web\C#\MoneyTrackerApp\MoneyTracker\obj\Debug\MoneyTracker.MainForm.resources
