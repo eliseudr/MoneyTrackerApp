@@ -399,14 +399,14 @@ namespace MoneyTracker {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TransaçõesTableRow AddTransaçõesTableRow(decimal Transação, string Descrição, System.DateTime TransData, bool TransTipo, int CounterID) {
+            public TransaçõesTableRow AddTransaçõesTableRow(decimal Transação, string Descrição, System.DateTime TransData, bool TransTipo) {
                 TransaçõesTableRow rowTransaçõesTableRow = ((TransaçõesTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Transação,
                         Descrição,
                         TransData,
                         TransTipo,
-                        CounterID};
+                        null};
                 rowTransaçõesTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTransaçõesTableRow);
                 return rowTransaçõesTableRow;
@@ -459,6 +459,9 @@ namespace MoneyTracker {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCounterID}, true));
                 this.columnDescrição.MaxLength = 500;
+                this.columnCounterID.AutoIncrement = true;
+                this.columnCounterID.AutoIncrementSeed = -1;
+                this.columnCounterID.AutoIncrementStep = -1;
                 this.columnCounterID.AllowDBNull = false;
                 this.columnCounterID.Unique = true;
             }
@@ -944,11 +947,23 @@ SELECT Transação, Descrição, TransData, TransTipo, CounterID FROM Transaçõ
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT TransaçõesTable.*\r\nFROM    TransaçõesTable";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"INSERT INTO TransaçõesTable
+                 (Transação, Descrição, TransData, TransTipo)
+VALUES (@Transação,@Descrição,@TransData,@TransTipo); 
+SELECT Transação, Descrição, TransData, TransTipo, CounterID FROM TransaçõesTable WHERE (CounterID = @CounterID)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Transação", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 2, "Transação", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descrição", global::System.Data.SqlDbType.NChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, "Descrição", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransData", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "TransData", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransTipo", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "TransTipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CounterID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CounterID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1189,6 +1204,53 @@ SELECT Transação, Descrição, TransData, TransTipo, CounterID FROM Transaçõ
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(global::System.Nullable<decimal> Transação, string Descrição, global::System.Nullable<global::System.DateTime> TransData, global::System.Nullable<bool> TransTipo, global::System.Nullable<decimal> Original_Transação, string Original_Descrição, global::System.Nullable<global::System.DateTime> Original_TransData, global::System.Nullable<bool> Original_TransTipo, int Original_CounterID) {
             return this.Update(Transação, Descrição, TransData, TransTipo, Original_CounterID, Original_Transação, Original_Descrição, Original_TransData, Original_TransTipo, Original_CounterID);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int InsertTransacao(global::System.Nullable<decimal> Transação, string Descrição, global::System.Nullable<global::System.DateTime> TransData, global::System.Nullable<bool> TransTipo, int CounterID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((Transação.HasValue == true)) {
+                command.Parameters[0].Value = ((decimal)(Transação.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Descrição == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Descrição));
+            }
+            if ((TransData.HasValue == true)) {
+                command.Parameters[2].Value = ((System.DateTime)(TransData.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((TransTipo.HasValue == true)) {
+                command.Parameters[3].Value = ((bool)(TransTipo.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            command.Parameters[4].Value = ((int)(CounterID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

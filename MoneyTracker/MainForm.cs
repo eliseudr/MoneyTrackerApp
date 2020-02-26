@@ -31,5 +31,38 @@ namespace MoneyTracker
         {
 
         }
+
+        private void AdicionarTransacao_Click(object sender, EventArgs e)
+        {
+            //Codigos para adiconar dados no database
+            //Funçao Convert.ToDecimal para converter o texto inserido em decimal
+            decimal TransValor = Convert.ToDecimal(Montante.Text);
+
+            //Ira inserir a descrição 
+            string TransDescricao = Descricao.Text;
+
+            DateTime TransData = DataTransacao.Value;
+
+            //Pagamento ou recebimento foram definidos como ''bit'' 1 ou 0.
+            int TransTipo = 0;
+
+
+            if( Pagamento.Checked)
+            {
+                TransTipo = 0;
+            }
+            if ( Recebimento.Checked)
+            {
+                TransTipo = 1;
+            }
+
+            int CounterID = 1;
+
+            DataSet1TableAdapters.TransaçõesTableTableAdapter MyAdapter = new DataSet1TableAdapters.TransaçõesTableTableAdapter();
+            MyAdapter.InsertTransacao(TransValor, TransDescricao, TransData, Convert.ToBoolean(TransTipo), CounterID);
+
+            MessageBox.Show("Concluido !!");
+
+        }
     }
 }
