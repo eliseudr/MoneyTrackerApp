@@ -22,5 +22,39 @@ namespace MoneyTracker.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Eliseu")]
+        public string AppNome {
+            get {
+                return ((string)(this["AppNome"]));
+            }
+            set {
+                this["AppNome"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1364")]
+        public string AppSenha {
+            get {
+                return ((string)(this["AppSenha"]));
+            }
+            set {
+                this["AppSenha"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=MoneyTracker;Integrated Security=True")]
+        public string MoneyTrackerConnectionString {
+            get {
+                return ((string)(this["MoneyTrackerConnectionString"]));
+            }
+        }
     }
 }

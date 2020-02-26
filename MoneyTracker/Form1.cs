@@ -27,9 +27,18 @@ namespace MoneyTracker
             //Oque vai acontecer quando clicar no LogIn
             //Se a senhar estar correta, abrirar o formulario principal
 
-            MainForm mainform = new MainForm();
-            mainform.Show(); //Mostra o outro formulario
-            this.Hide(); //Fecha o formulario Antigo
+            if(TextBoxUsuario.Text == Properties.Settings.Default.AppNome && TextBoxSenha.Text == Properties.Settings.Default.AppSenha)
+            {
+                //LogIn
+                MainForm mainform = new MainForm();
+                mainform.Show(); //Mostra o outro formulario
+                this.Hide(); //Fecha o formulario Antigo
+            }
+            else
+            {
+                //NEGADO!!
+                MessageBox.Show("Acesso Negado !!");
+            }
 
         }
 
