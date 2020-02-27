@@ -26,5 +26,12 @@ namespace MoneyTracker
         {
 
         }
+
+        private void ButtonVoltar_Click(object sender, EventArgs e)
+        {
+            LogIn login = new LogIn();
+            login.Show();
+            this.Hide();
+        }
     }
 }

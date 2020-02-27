@@ -39,13 +39,14 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.AdicionarTransacao = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.Voltar2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Montante
             // 
             this.Montante.Location = new System.Drawing.Point(34, 79);
-            this.Montante.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Montante.Margin = new System.Windows.Forms.Padding(2);
             this.Montante.Name = "Montante";
             this.Montante.Size = new System.Drawing.Size(535, 20);
             this.Montante.TabIndex = 0;
@@ -63,7 +64,7 @@
             // Descricao
             // 
             this.Descricao.Location = new System.Drawing.Point(34, 124);
-            this.Descricao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Descricao.Margin = new System.Windows.Forms.Padding(2);
             this.Descricao.Multiline = true;
             this.Descricao.Name = "Descricao";
             this.Descricao.Size = new System.Drawing.Size(535, 33);
@@ -93,7 +94,7 @@
             // DataTransacao
             // 
             this.DataTransacao.Location = new System.Drawing.Point(34, 183);
-            this.DataTransacao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DataTransacao.Margin = new System.Windows.Forms.Padding(2);
             this.DataTransacao.Name = "DataTransacao";
             this.DataTransacao.Size = new System.Drawing.Size(151, 20);
             this.DataTransacao.TabIndex = 5;
@@ -103,7 +104,7 @@
             this.Pagamento.AutoSize = true;
             this.Pagamento.Checked = true;
             this.Pagamento.Location = new System.Drawing.Point(34, 221);
-            this.Pagamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pagamento.Margin = new System.Windows.Forms.Padding(2);
             this.Pagamento.Name = "Pagamento";
             this.Pagamento.Size = new System.Drawing.Size(79, 17);
             this.Pagamento.TabIndex = 6;
@@ -115,7 +116,7 @@
             // 
             this.Recebimento.AutoSize = true;
             this.Recebimento.Location = new System.Drawing.Point(124, 221);
-            this.Recebimento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Recebimento.Margin = new System.Windows.Forms.Padding(2);
             this.Recebimento.Name = "Recebimento";
             this.Recebimento.Size = new System.Drawing.Size(88, 17);
             this.Recebimento.TabIndex = 7;
@@ -127,7 +128,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(34, 268);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -137,7 +138,7 @@
             // AdicionarTransacao
             // 
             this.AdicionarTransacao.Location = new System.Drawing.Point(437, 197);
-            this.AdicionarTransacao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AdicionarTransacao.Margin = new System.Windows.Forms.Padding(2);
             this.AdicionarTransacao.Name = "AdicionarTransacao";
             this.AdicionarTransacao.Size = new System.Drawing.Size(131, 28);
             this.AdicionarTransacao.TabIndex = 9;
@@ -155,6 +156,16 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Minhas Transações";
             // 
+            // Voltar2
+            // 
+            this.Voltar2.Location = new System.Drawing.Point(494, 12);
+            this.Voltar2.Name = "Voltar2";
+            this.Voltar2.Size = new System.Drawing.Size(75, 28);
+            this.Voltar2.TabIndex = 11;
+            this.Voltar2.Text = "Voltar";
+            this.Voltar2.UseVisualStyleBackColor = true;
+            this.Voltar2.Click += new System.EventHandler(this.Voltar2_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,6 +173,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(600, 456);
+            this.Controls.Add(this.Voltar2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.AdicionarTransacao);
             this.Controls.Add(this.dataGridView1);
@@ -174,7 +186,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Montante);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.Text = "MinhasTransações";
@@ -198,5 +210,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button AdicionarTransacao;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Voltar2;
     }
 }

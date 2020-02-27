@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.TextBoxSenha = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Log = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.TextBoxUsuario = new System.Windows.Forms.TextBox();
             this.SingUp = new System.Windows.Forms.Button();
@@ -51,22 +51,22 @@
             // TextBoxSenha
             // 
             this.TextBoxSenha.Location = new System.Drawing.Point(66, 280);
-            this.TextBoxSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextBoxSenha.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxSenha.Name = "TextBoxSenha";
             this.TextBoxSenha.PasswordChar = '*';
             this.TextBoxSenha.Size = new System.Drawing.Size(255, 20);
             this.TextBoxSenha.TabIndex = 1;
             // 
-            // button1
+            // Log
             // 
-            this.button1.Location = new System.Drawing.Point(142, 335);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 27);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "LogIn";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Log.Location = new System.Drawing.Point(142, 335);
+            this.Log.Margin = new System.Windows.Forms.Padding(2);
+            this.Log.Name = "Log";
+            this.Log.Size = new System.Drawing.Size(87, 27);
+            this.Log.TabIndex = 2;
+            this.Log.Text = "LogIn";
+            this.Log.UseVisualStyleBackColor = true;
+            this.Log.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -81,7 +81,7 @@
             // TextBoxUsuario
             // 
             this.TextBoxUsuario.Location = new System.Drawing.Point(66, 228);
-            this.TextBoxUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextBoxUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxUsuario.Name = "TextBoxUsuario";
             this.TextBoxUsuario.Size = new System.Drawing.Size(255, 20);
             this.TextBoxUsuario.TabIndex = 4;
@@ -89,7 +89,7 @@
             // SingUp
             // 
             this.SingUp.Location = new System.Drawing.Point(142, 375);
-            this.SingUp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SingUp.Margin = new System.Windows.Forms.Padding(2);
             this.SingUp.Name = "SingUp";
             this.SingUp.Size = new System.Drawing.Size(87, 28);
             this.SingUp.TabIndex = 5;
@@ -101,7 +101,7 @@
             // 
             this.pictureBox1.Image = global::MoneyTracker.Properties.Resources.finance_11_512;
             this.pictureBox1.Location = new System.Drawing.Point(121, 53);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(154, 141);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -119,10 +119,10 @@
             this.Controls.Add(this.SingUp);
             this.Controls.Add(this.TextBoxUsuario);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Log);
             this.Controls.Add(this.TextBoxSenha);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LogIn";
             this.Text = "MoneyTracker";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -135,7 +135,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TextBoxSenha;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Log;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TextBoxUsuario;
         private System.Windows.Forms.Button SingUp;
