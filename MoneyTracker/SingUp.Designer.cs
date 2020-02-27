@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.Usúario = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxUsuario = new System.Windows.Forms.TextBox();
+            this.textBoxSenha = new System.Windows.Forms.TextBox();
             this.Senha = new System.Windows.Forms.Label();
             this.ConfSenha = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxConfirmaçaoSenha = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.Email = new System.Windows.Forms.Label();
             this.Cadastrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -53,22 +53,22 @@
             this.Usúario.Text = "Usúario";
             this.Usúario.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // textBoxUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(62, 211);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(264, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxUsuario.Location = new System.Drawing.Point(62, 211);
+            this.textBoxUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxUsuario.Name = "textBoxUsuario";
+            this.textBoxUsuario.Size = new System.Drawing.Size(264, 20);
+            this.textBoxUsuario.TabIndex = 1;
             // 
-            // textBox2
+            // textBoxSenha
             // 
-            this.textBox2.Location = new System.Drawing.Point(62, 258);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(264, 20);
-            this.textBox2.TabIndex = 2;
+            this.textBoxSenha.Location = new System.Drawing.Point(62, 258);
+            this.textBoxSenha.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxSenha.Name = "textBoxSenha";
+            this.textBoxSenha.PasswordChar = '*';
+            this.textBoxSenha.Size = new System.Drawing.Size(264, 20);
+            this.textBoxSenha.TabIndex = 2;
             // 
             // Senha
             // 
@@ -90,22 +90,22 @@
             this.ConfSenha.TabIndex = 4;
             this.ConfSenha.Text = "Confirmação da senha";
             // 
-            // textBox3
+            // textBoxConfirmaçaoSenha
             // 
-            this.textBox3.Location = new System.Drawing.Point(62, 306);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(264, 20);
-            this.textBox3.TabIndex = 5;
+            this.textBoxConfirmaçaoSenha.Location = new System.Drawing.Point(62, 306);
+            this.textBoxConfirmaçaoSenha.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxConfirmaçaoSenha.Name = "textBoxConfirmaçaoSenha";
+            this.textBoxConfirmaçaoSenha.PasswordChar = '*';
+            this.textBoxConfirmaçaoSenha.Size = new System.Drawing.Size(264, 20);
+            this.textBoxConfirmaçaoSenha.TabIndex = 5;
             // 
-            // textBox4
+            // textBoxEmail
             // 
-            this.textBox4.Location = new System.Drawing.Point(62, 355);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(264, 20);
-            this.textBox4.TabIndex = 6;
+            this.textBoxEmail.Location = new System.Drawing.Point(62, 355);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(264, 20);
+            this.textBoxEmail.TabIndex = 6;
             // 
             // Email
             // 
@@ -120,11 +120,11 @@
             // Cadastrar
             // 
             this.Cadastrar.Location = new System.Drawing.Point(219, 395);
-            this.Cadastrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Cadastrar.Margin = new System.Windows.Forms.Padding(2);
             this.Cadastrar.Name = "Cadastrar";
             this.Cadastrar.Size = new System.Drawing.Size(87, 28);
             this.Cadastrar.TabIndex = 8;
-            this.Cadastrar.Text = "SingUp";
+            this.Cadastrar.Text = "Cadastrar";
             this.Cadastrar.UseVisualStyleBackColor = true;
             this.Cadastrar.Click += new System.EventHandler(this.Cadastrar_Click);
             // 
@@ -132,7 +132,7 @@
             // 
             this.pictureBox1.Image = global::MoneyTracker.Properties.Resources.finance_11_512;
             this.pictureBox1.Location = new System.Drawing.Point(118, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(154, 141);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -159,14 +159,14 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Cadastrar);
             this.Controls.Add(this.Email);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.textBoxConfirmaçaoSenha);
             this.Controls.Add(this.ConfSenha);
             this.Controls.Add(this.Senha);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxSenha);
+            this.Controls.Add(this.textBoxUsuario);
             this.Controls.Add(this.Usúario);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SingUp";
             this.Text = "SingUp";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -178,12 +178,12 @@
         #endregion
 
         private System.Windows.Forms.Label Usúario;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxUsuario;
+        private System.Windows.Forms.TextBox textBoxSenha;
         private System.Windows.Forms.Label Senha;
         private System.Windows.Forms.Label ConfSenha;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxConfirmaçaoSenha;
+        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.Button Cadastrar;
         private System.Windows.Forms.PictureBox pictureBox1;

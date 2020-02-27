@@ -24,6 +24,22 @@ namespace MoneyTracker
 
         private void Cadastrar_Click(object sender, EventArgs e)
         {
+            String novoUsario = textBoxUsuario.Text;
+            String novaSenha = textBoxSenha.Text;
+            String ConfirmSenha = textBoxConfirmaçaoSenha.Text;
+            String novoEmail = textBoxEmail.Text;
+
+            if(novaSenha != ConfirmSenha)
+            {
+                MessageBox.Show("Senhas divergentes !!");
+            }
+            else
+            {
+                MessageBox.Show("Cadastro efetuado !!");
+                DataSet1TableAdapters.CadastroUsuarioTableAdapter Adapter = new DataSet1TableAdapters.CadastroUsuarioTableAdapter();
+                Adapter.InsertCadastroUsuario(novoUsario, novaSenha, novoEmail);
+
+            }
 
         }
 

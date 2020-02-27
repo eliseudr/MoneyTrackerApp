@@ -64,7 +64,7 @@
             this.Log.Name = "Log";
             this.Log.Size = new System.Drawing.Size(87, 27);
             this.Log.TabIndex = 2;
-            this.Log.Text = "LogIn";
+            this.Log.Text = "Entrar";
             this.Log.UseVisualStyleBackColor = true;
             this.Log.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -93,7 +93,7 @@
             this.SingUp.Name = "SingUp";
             this.SingUp.Size = new System.Drawing.Size(87, 28);
             this.SingUp.TabIndex = 5;
-            this.SingUp.Text = "SingUp";
+            this.SingUp.Text = "Cadastrar";
             this.SingUp.UseVisualStyleBackColor = true;
             this.SingUp.Click += new System.EventHandler(this.button2_Click);
             // 
