@@ -48,5 +48,10 @@ namespace MoneyTracker
             singup.Show();
             this.Hide();
         }
+
+        private void LogIn_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }

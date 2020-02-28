@@ -24,11 +24,8 @@ namespace MoneyTracker
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
+            // TODO: esta linha de código carrega dados na tabela 'dataSet1.TransaçõesTable'. Você pode movê-la ou removê-la conforme necessário.
+            this.transaçõesTableTableAdapter.Fill(this.dataSet1.TransaçõesTable);
 
         }
 
@@ -63,6 +60,8 @@ namespace MoneyTracker
 
             MessageBox.Show("Concluido !!");
 
+            //Ira adicionar a transaçao direto no GridView
+            this.transaçõesTableTableAdapter.Fill(this.dataSet1.TransaçõesTable);
         }
 
         private void Voltar2_Click(object sender, EventArgs e)
@@ -70,6 +69,19 @@ namespace MoneyTracker
             LogIn login = new LogIn();
             login.Show();
             this.Hide();
+        }
+
+        private void ButtonUpdate_Click(object sender, EventArgs e)
+        {
+            transaçõesTableTableAdapter.Update(dataSet1);
+            dataGridView1.EndEdit();
+
+            this.transaçõesTableTableAdapter.Fill(this.dataSet1.TransaçõesTable);
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+  
         }
     }
 }

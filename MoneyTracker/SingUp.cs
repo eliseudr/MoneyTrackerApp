@@ -39,6 +39,9 @@ namespace MoneyTracker
                 DataSet1TableAdapters.CadastroUsuarioTableAdapter Adapter = new DataSet1TableAdapters.CadastroUsuarioTableAdapter();
                 Adapter.InsertCadastroUsuario(novoUsario, novaSenha, novoEmail);
 
+                LogIn login = new LogIn();
+                login.Show();
+                this.Hide();
             }
 
         }
@@ -48,6 +51,11 @@ namespace MoneyTracker
             LogIn login = new LogIn();
             login.Show();
             this.Hide();
+        }
+
+        private void SingUp_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
     }
 }

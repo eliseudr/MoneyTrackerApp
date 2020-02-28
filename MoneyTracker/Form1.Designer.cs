@@ -125,6 +125,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LogIn";
             this.Text = "MoneyTracker";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LogIn_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
